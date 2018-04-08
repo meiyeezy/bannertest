@@ -1,0 +1,177 @@
+section {
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    top:0;
+    left:0;
+}
+
+.bg {
+    width:300px;
+    height:250px;
+    background: url('images/intro_bg.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: zoomin 7s ease;
+    overflow: hidden;
+    z-index:-10;
+}
+
+.animateIntro {
+    margin-top:-500px;
+    width:300px;
+    height:58px;
+    background-color: none;
+    position: absolute;
+    overflow: hidden;
+    margin-top:100px;
+    z-index: 0;
+}
+
+.intro1 {
+    position: absolute;
+    background: url('images/intro_text1.png') transparent;
+    animation: zoomout 1.5s ease-in-out forwards, fadeout 0.75s ease-out 1.3s forwards;
+    opacity: 1;
+}
+
+.intro2 {
+    position: absolute;
+    background: url('images/intro_text2.png') transparent;
+    animation: fadein 1s ease-in-out 1.7s forwards, zoomout 1.5s ease-in-out 1.7s forwards, fadeout 1s ease-out 2.7s forwards;
+    opacity: 0;
+}
+
+.intro3 {
+    position: absolute;
+    background: url('images/intro_text3.png') transparent;
+    animation: fadein 1s ease-in-out 3.4s forwards, zoomout 1.5s ease-in-out 3.4s forwards, fadeout 1s ease-out 4.2s forwards;
+    opacity: 0;
+}
+
+.earth {
+    position: absolute;
+    height: 177px;
+    width:300px;
+    background: url('images/ef_earth.png') transparent;
+    opacity: 0;
+    margin-top:250px; transform:scale(1.5);
+    animation: slideup 2s linear 3.5s forwards, fadein 0.5s ease-out 4s forwards;
+    z-index: 2;
+}
+
+.ship {
+    position:absolute;
+    height: 95px;
+    width: 300px;
+    background: url('images/ef_spaceship.png') transparent;
+    opacity: 0;
+    margin-top:0px;transform:scale(1.5);
+    animation: slidedown 2s linear 3.5s forwards, fadein 0.5s ease-out 4s forwards;
+    z-index:3;
+}
+
+.ship img {
+    display:none;
+}
+
+.titletext {
+    position:absolute;
+    height: 55px;
+    width: 276px;
+    background: url('images/tt.png') transparent;
+    opacity: 0;
+    margin-left:12px;
+    margin-top:55px;transform:scale(1.5);
+    animation: slidedown 2s linear 3.75s forwards, fadein 0.5s ease-out 4.5s forwards;
+    z-index:5;
+}
+
+.date {
+    position: absolute;
+    height: 36px;
+    width: 300px;
+    background: url('images/date.png') transparent;
+    opacity: 0;
+    margin-top:165px;
+    animation: fadein 1.5s ease-out 5s forwards;
+    z-index:6;
+}
+
+.blackbg {
+    position:absolute;
+    z-index:-10;
+    height:250px;
+    width:300px;
+    background: url('images/blackFade.png');
+    animation: fadein 0.5s ease-in 4.2s forwards;
+    opacity: 0;
+    z-index: 1;
+}
+
+.button {
+    position:absolute;
+    width:252px;
+    height:29px;
+    margin-top:270px;margin-left: 20px;
+    background: url('images/cta.png');
+    animation: up 1s ease-in 5s forwards;
+    z-index:8;
+    overflow: hidden;
+}
+
+.flash {
+    display:none;
+    background: url('images/lightwash.png') transparent;
+    width:252px;
+    height:29px;
+}
+
+.legal {
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    margin-top:240px;
+    left:2px;
+    background: url('images/legal.png') transparent;
+    animation: fadein 1s ease-in 5.5s forwards;
+    z-index:9;
+    opacity:0;
+}
+
+@keyframes up {
+    0% {margin-top: 270px; }
+    100% {margin-top: 200px; }
+}
+
+@keyframes slideup {
+    0% {margin-top:250px; transform:scale(2);}
+    100% {transform:scale(1); margin-top:100px;}
+}
+
+@keyframes slidedown {
+    0% {transform: scale(2); }
+    100% {transform: scale(1);}
+}
+
+@keyframes zoomin {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.5);}
+}
+
+@keyframes zoomout {
+    0% {transform: scale(1.5);}
+    50% {transform: scale(1);}
+    100% {transform: scale(0.5);}
+  }
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity:1;}
+}
+
+@keyframes fadeout {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
